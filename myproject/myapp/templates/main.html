@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>Ukr Energo Test Task</title>
+  
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        {% load static %}
+        <script src="{% static "scripts--tags.js" %}"></script>
+        <link rel="stylesheet" href="{% static "style.css" %}">
+    </head>
+    <body>
+        <div id="myModalBox" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">About Autor</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>   
+                    </div>
+                    <div class="modal-body">Veremeev Yuriy, +380932291121, veremeevu@ukr.net</div>
+                    <!-- Футер модального окна -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="menu" >
+            <a class="dropdown-toggle" href="#" title="Menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#myModal" data-toggle="modal" data-target="#myModalBox">About</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div id="piechart_3d" style="width: 900px; height: 400px;"></div>
+            <input type="url" id="urlinput" name="website" placeholder="Input url please" style="width: 600px; height: 20px;">
+            <input type="button" id="submit" value="Send data" name = "send_botton" onclick="updateButton()">
+        </section>
+    </body>
+</html>
