@@ -6,7 +6,6 @@ class UrlTagsModelTest(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        #Set up non-modified objects used by all test methods
         UrlTags.objects.create(url='https://www.google.com/', params='uih')
 
     def test_url_label(self):
